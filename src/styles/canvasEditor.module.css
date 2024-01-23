@@ -1,0 +1,12 @@
+.fileContainer {
+  @apply border border-solid border-[#0000001c] w-[40rem] p-[10px] rounded-lg text-sm 
+          flex items-start justify-center flex-col;
+}
+
+.file {
+  @apply cursor-pointer flex items-center gap-[5px] text-[#808080ad];
+}
+
+input {
+  @apply outline-none;
+}
