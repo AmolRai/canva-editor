@@ -29,6 +29,7 @@ class Canvas extends Component {
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
     }
+
     this.debounceTimeout = setTimeout(() => {
       const { selectedImage, caption, callToAction, backgroundColor } =
         this.props;

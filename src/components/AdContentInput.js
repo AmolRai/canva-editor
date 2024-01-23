@@ -12,7 +12,7 @@ const AdContentInput = ({
       <div className={`${styles.fileContainer} max-[1200px]:w-full`}>
         <label
           htmlFor="file"
-          className="flex items-center gap-1 p-2 text-gray-500"
+          className="flex items-center gap-1 p-2 text-gray-500 cursor-pointer"
         >
           <img
             width={20}
