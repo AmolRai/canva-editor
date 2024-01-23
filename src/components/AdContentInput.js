@@ -10,7 +10,10 @@ const AdContentInput = ({
   return (
     <div className="flex flex-col gap-4 items-center justify-center">
       <div className={`${styles.fileContainer} max-[1200px]:w-full`}>
-        <label htmlFor="file" className={styles.file}>
+        <label
+          htmlFor="file"
+          className="flex items-center gap-1 p-2 text-gray-500"
+        >
           <img
             width={20}
             src="https://cdn-icons-png.flaticon.com/512/5053/5053024.png"
@@ -29,14 +32,11 @@ const AdContentInput = ({
       <div className={`${styles.fileContainer} max-[1200px]:w-full`}>
         <div className="flex items-center justify-between w-full">
           <div className="flex flex-col justify-center w-[90%]">
-            <span
-              className={styles.file}
-              style={{ fontSize: "12px", margin: "4px auto auto 4px" }}
-            >
+            <span className="text-sm text pl-2 pr-2 pt-1 text-gray-400">
               Ad Content
             </span>
             <input
-              className="mt-[5px] border-none bg-none ml-1"
+              className="mt-[5px] border-none bg-none ml-2 mb-1"
               type="text"
               value={caption}
               onChange={handleCaptionChange}
@@ -52,11 +52,9 @@ const AdContentInput = ({
       </div>
       <div className={`${styles.fileContainer} max-[1200px]:w-full`}>
         <div className="flex flex-col justify-center w-full">
-          <span className={`${styles.file} text-xs mt-1 mb-auto mr-auto ml-1`}>
-            CTA
-          </span>
+          <span className="text-sm text pl-2 pr-2 pt-1 text-gray-400">CTA</span>
           <input
-            className="mt-[5px] border-none bg-none ml-1"
+            className="mt-[5px] border-none bg-none ml-2 mb-1"
             type="text"
             value={callToAction}
             onChange={handleCallToActionChange}

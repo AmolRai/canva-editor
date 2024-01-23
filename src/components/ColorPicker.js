@@ -22,6 +22,7 @@ const ColorPicker = ({
       />
       <label htmlFor="color">
         <img
+          className="mb-1"
           onClick={() => {
             eyeDropperPicker();
           }}

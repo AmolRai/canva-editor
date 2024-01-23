@@ -4,11 +4,12 @@ import AdContentInput from "./AdContentInput";
 import FileInput from "./FileInput";
 import ColorPicker from "./ColorPicker";
 import ColorPickerList from "./ColorPickerList";
+import { canvaData } from "../utils/canvaData";
 
 const CanvasEditor = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [caption, setCaption] = useState("");
-  const [callToAction, setCallToAction] = useState("");
+  const [caption, setCaption] = useState(canvaData.caption.text);
+  const [callToAction, setCallToAction] = useState(canvaData.cta.text);
   const [backgroundColor, setBackgroundColor] = useState("");
   const [usedColors, setUsedColors] = useState([]);
   const [colorIndex, setColorIndex] = useState(0);
@@ -94,9 +95,9 @@ const CanvasEditor = () => {
           handleCaptionChange={handleCaptionChange}
           handleCallToActionChange={handleCallToActionChange}
         />
-        <div className="cursor-pointer text-[20px] w-full mt-4">
-          <span className="text-sm text-gray-300">Choose your color</span>
-          <div className="flex mt-[10px]">
+        <div className="cursor-pointer text-[20px] w-full">
+          <span className="text-sm text-gray-400">Choose your color</span>
+          <div className="flex mt-1">
             <ColorPickerList
               usedColors={usedColors}
               setBackgroundColor={(color) => setBackgroundColor(color)}
